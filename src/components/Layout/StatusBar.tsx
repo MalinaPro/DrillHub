@@ -1,14 +1,12 @@
 import React from 'react';
-import { useTabStore } from '../../store/tabStore';
 import './StatusBar.css';
 
 interface StatusBarProps {
+  activeApp?: string;
   projectName: string;
 }
 
-const StatusBar: React.FC<StatusBarProps> = ({ projectName }) => {
-  const { tabs, activeTabId, openTab } = useTabStore();
-  const activeTab = tabs.find(tab => tab.id === activeTabId);
+const StatusBar: React.FC<StatusBarProps> = ({ activeApp, projectName }) => {
   const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
   return (
@@ -18,16 +16,12 @@ const StatusBar: React.FC<StatusBarProps> = ({ projectName }) => {
           <span className="status-icon">📁</span>
           <span>{projectName}</span>
         </div>
-        {activeTab && activeTab.type !== 'welcome' && (
+        {activeApp && (
           <div className="status-item">
             <span className="status-icon">📱</span>
-            <span>Active: {activeTab.title}</span>
+            <span>Running: {activeApp}</span>
           </div>
         )}
-        <div className="status-item">
-          <span className="status-icon">📄</span>
-          <span>{tabs.length} tab{tabs.length !== 1 ? 's' : ''}</span>
-        </div>
         <div className="status-item">
           <span className="status-icon">🔗</span>
           <span>Connected</span>
@@ -41,16 +35,7 @@ const StatusBar: React.FC<StatusBarProps> = ({ projectName }) => {
       </div>
       
       <div className="status-right">
-        <div 
-          className="status-item clickable"
-          onClick={() => openTab({
-            id: 'settings',
-            title: 'Settings',
-            type: 'settings',
-            closable: true,
-            modified: false
-          })}
-        >
+        <div className="status-item clickable">
           <span className="status-icon">⚙️</span>
           <span>Settings</span>
         </div>

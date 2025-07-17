@@ -1,19 +1,18 @@
 import { useState } from "react";
 import ActivityBar from "./components/Layout/ActivityBar";
 import SideBar from "./components/Layout/SideBar";
-import TabContainer from "./components/Layout/TabContainer";
+import EditorArea from "./components/Layout/EditorArea";
 import StatusBar from "./components/Layout/StatusBar";
 import TitleBar from "./components/Layout/TitleBar";
 import RightPanel from "./components/Layout/RightPanel";
-import { useTabStore } from "./store/tabStore";
 import "./App.css";
 
 function App() {
   const [activeView, setActiveView] = useState("explorer");
   const [sideBarVisible, setSideBarVisible] = useState(true);
+  const [activeApp, setActiveApp] = useState<string | undefined>(undefined);
   const [rightPanelOpen, setRightPanelOpen] = useState(false);
   const [bottomPanelOpen, setBottomPanelOpen] = useState(false);
-  const { openTab } = useTabStore();
 
   const handleViewChange = (view: string) => {
     if (activeView === view) {
@@ -29,13 +28,7 @@ function App() {
   };
 
   const handleOpenInEditor = (type: 'settings' | 'account', title: string) => {
-    openTab({
-      id: type,
-      title: title,
-      type: type,
-      closable: true,
-      modified: false
-    });
+    setActiveApp(type);
   };
 
   const handleLeftPanelToggle = () => {
@@ -69,10 +62,10 @@ function App() {
           isVisible={sideBarVisible} 
           onOpenInEditor={handleOpenInEditor}
         />
-        <TabContainer />
+        <EditorArea activeApp={activeApp} />
         <RightPanel isOpen={rightPanelOpen} />
       </div>
-      <StatusBar projectName="Marketplace App" />
+      <StatusBar activeApp={activeApp} projectName="Marketplace App" />
     </div>
   );
 }
