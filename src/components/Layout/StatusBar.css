@@ -1,0 +1,91 @@
+.status-bar {
+  height: 22px;
+  background-color: var(--vscode-statusBar-background, #007acc);
+  color: var(--vscode-statusBar-foreground, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  font-size: 12px;
+  border-top: 1px solid var(--vscode-statusBar-border, #005a9e);
+  user-select: none;
+}
+
+.status-left,
+.status-center,
+.status-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-center {
+  flex: 1;
+  justify-content: center;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.status-item.clickable {
+  cursor: pointer;
+}
+
+.status-item.clickable:hover {
+  background-color: var(--vscode-statusBarItem-hoverBackground, rgba(255, 255, 255, 0.12));
+}
+
+.status-icon {
+  font-size: 11px;
+  line-height: 1;
+}
+
+/* Different status bar states */
+.status-bar.error {
+  background-color: var(--vscode-statusBar-errorBackground, #c72e29);
+  color: var(--vscode-statusBar-errorForeground, #ffffff);
+}
+
+.status-bar.warning {
+  background-color: var(--vscode-statusBar-warningBackground, #e9a700);
+  color: var(--vscode-statusBar-warningForeground, #000000);
+}
+
+.status-bar.no-folder {
+  background-color: var(--vscode-statusBar-noFolderBackground, #68217a);
+  color: var(--vscode-statusBar-noFolderForeground, #ffffff);
+}
+
+/* Theme variables */
+:root {
+  --vscode-statusBar-background: #007acc;
+  --vscode-statusBar-foreground: #ffffff;
+  --vscode-statusBar-border: #005a9e;
+  --vscode-statusBarItem-hoverBackground: rgba(255, 255, 255, 0.12);
+  --vscode-statusBar-errorBackground: #c72e29;
+  --vscode-statusBar-errorForeground: #ffffff;
+  --vscode-statusBar-warningBackground: #e9a700;
+  --vscode-statusBar-warningForeground: #000000;
+  --vscode-statusBar-noFolderBackground: #68217a;
+  --vscode-statusBar-noFolderForeground: #ffffff;
+}
+
+[data-theme="light"] {
+  --vscode-statusBar-background: #0078d4;
+  --vscode-statusBar-foreground: #ffffff;
+  --vscode-statusBar-border: #005a9e;
+  --vscode-statusBarItem-hoverBackground: rgba(255, 255, 255, 0.2);
+  --vscode-statusBar-errorBackground: #e51400;
+  --vscode-statusBar-errorForeground: #ffffff;
+  --vscode-statusBar-warningBackground: #ffcc02;
+  --vscode-statusBar-warningForeground: #000000;
+  --vscode-statusBar-noFolderBackground: #8a2be2;
+  --vscode-statusBar-noFolderForeground: #ffffff;
+}

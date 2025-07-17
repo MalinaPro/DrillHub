@@ -1,0 +1,54 @@
+{
+  "name": "VSCode Light",
+  "type": "light",
+  "colors": {
+    "editor.background": "#ffffff",
+    "editor.foreground": "#000000",
+    "editor.lineHighlightBackground": "#f2f2f2",
+    "editorCursor.foreground": "#000000",
+    "editorWhitespace.foreground": "#e3e4e6",
+    "editorIndentGuide.background": "#dddddd",
+    "editorIndentGuide.activeBackground": "#a0a0a0",
+    "activityBar.background": "#f3f3f3",
+    "activityBar.foreground": "#333333",
+    "activityBar.border": "#e5e5e5",
+    "activityBar.activeBorder": "#0078d4",
+    "sideBar.background": "#f3f3f3",
+    "sideBar.foreground": "#333333",
+    "sideBar.border": "#e5e5e5",
+    "sideBarSectionHeader.background": "#e8e8e8",
+    "sideBarSectionHeader.foreground": "#333333",
+    "statusBar.background": "#0078d4",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.border": "#005a9e",
+    "tab.activeBackground": "#ffffff",
+    "tab.activeForeground": "#333333",
+    "tab.activeBorder": "#0078d4",
+    "tab.inactiveBackground": "#ececec",
+    "tab.inactiveForeground": "#6f6f6f",
+    "editorGroupHeader.tabsBackground": "#f3f3f3",
+    "editorGroupHeader.tabsBorder": "#e5e5e5",
+    "input.background": "#ffffff",
+    "input.foreground": "#333333",
+    "input.border": "#cecece",
+    "input.placeholderForeground": "#767676",
+    "button.background": "#0078d4",
+    "button.foreground": "#ffffff",
+    "button.hoverBackground": "#106ebe",
+    "list.hoverBackground": "#e8e8e8",
+    "list.inactiveSelectionBackground": "#e4e6f1",
+    "focusBorder": "#0078d4",
+    "descriptionForeground": "#767676"
+  },
+  "fonts": {
+    "editor": {
+      "fontFamily": "'Menlo', 'Monaco', 'Courier New', monospace",
+      "fontSize": "14px",
+      "lineHeight": "1.5"
+    },
+    "ui": {
+      "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif",
+      "fontSize": "13px"
+    }
+  }
+}

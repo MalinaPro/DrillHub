@@ -1,0 +1,45 @@
+{
+  "id": "text-editor",
+  "name": "Text Editor",
+  "version": "1.0.0",
+  "description": "Простой текстовый редактор для создания и редактирования файлов",
+  "author": "Marketplace Team",
+  "category": "productivity",
+  "icon": "📝",
+  "entryPoint": "index.html",
+  "permissions": [
+    "file-system-read",
+    "file-system-write",
+    "clipboard"
+  ],
+  "size": {
+    "minWidth": 400,
+    "minHeight": 300,
+    "defaultWidth": 800,
+    "defaultHeight": 600
+  },
+  "tags": ["editor", "text", "productivity"],
+  "screenshots": [
+    "screenshots/main.png",
+    "screenshots/features.png"
+  ],
+  "changelog": {
+    "1.0.0": "Первый релиз с базовой функциональностью редактирования"
+  },
+  "dependencies": [],
+  "api": {
+    "version": "1.0",
+    "endpoints": [
+      {
+        "name": "saveFile",
+        "description": "Сохранить файл",
+        "parameters": ["content", "filename"]
+      },
+      {
+        "name": "openFile",
+        "description": "Открыть файл",
+        "parameters": ["filename"]
+      }
+    ]
+  }
+}

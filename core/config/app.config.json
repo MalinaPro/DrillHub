@@ -1,0 +1,35 @@
+{
+  "app": {
+    "name": "Marketplace Desktop App",
+    "version": "1.0.0",
+    "description": "Desktop приложение с маркетплейсом встраиваемых приложений"
+  },
+  "ui": {
+    "theme": "dark",
+    "language": "ru",
+    "activityBar": {
+      "visible": true,
+      "position": "left"
+    },
+    "sideBar": {
+      "visible": true,
+      "width": 300
+    },
+    "statusBar": {
+      "visible": true
+    }
+  },
+  "marketplace": {
+    "apiUrl": "https://api.marketplace.example.com",
+    "autoUpdate": true,
+    "checkInterval": 3600000
+  },
+  "security": {
+    "allowedDomains": [
+      "localhost",
+      "127.0.0.1",
+      "marketplace.example.com"
+    ],
+    "sandboxApps": true
+  }
+}
