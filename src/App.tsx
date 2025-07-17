@@ -65,7 +65,7 @@ function App() {
         <EditorArea activeApp={activeApp} />
         <RightPanel isOpen={rightPanelOpen} />
       </div>
-      <StatusBar activeApp={activeApp} projectName="Marketplace App" />
+      <StatusBar activeApp={activeApp} projectName="DrillHub" />
     </div>
   );
 }

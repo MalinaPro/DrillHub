@@ -1,8 +1,8 @@
 {
   "app": {
-    "name": "Marketplace Desktop App",
+    "name": "DrillHub",
     "version": "1.0.0",
-    "description": "Desktop приложение с маркетплейсом встраиваемых приложений"
+    "description": "Универсальная платформа для разработки и управления проектами"
   },
   "ui": {
     "theme": "dark",

@@ -45,7 +45,7 @@ const SideBar: React.FC<SideBarProps> = ({ activeView, isVisible, onOpenInEditor
               <h3>EXPLORER</h3>
             </div>
             <div className="sidebar-body">
-              <CollapsibleSection title="PROJECT X" defaultExpanded={true}>
+              <CollapsibleSection title="DRILLHUB" defaultExpanded={true}>
                 <div className="tree-view">
                   <div className="tree-item">📁 src</div>
                   <div className="tree-item indent">📁 components</div>

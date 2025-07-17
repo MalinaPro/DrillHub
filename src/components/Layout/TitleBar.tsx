@@ -55,7 +55,7 @@ const TitleBar: React.FC<TitleBarProps> = ({
       </div>
       
       <div className="title-bar-center">
-        <span className="app-title">Marketplace Desktop</span>
+        <span className="app-title">DrillHub</span>
       </div>
       
       <div className="title-bar-right">

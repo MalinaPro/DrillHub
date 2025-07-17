@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "tauri-app",
+  "productName": "DrillHub",
   "version": "0.1.0",
-  "identifier": "com.tauri-app.app",
+  "identifier": "com.drillhub.app",
   "build": {
     "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:1422",
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "Marketplace Desktop App",
+        "title": "DrillHub",
         "width": 1200,
         "height": 800,
         "decorations": false,
