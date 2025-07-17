@@ -1,0 +1,171 @@
+.title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 28px;
+  background: var(--vscode-titleBar-activeBackground, #3c3c3c);
+  border-bottom: 1px solid var(--vscode-titleBar-border, #2d2d30);
+  color: var(--vscode-titleBar-activeForeground, #cccccc);
+  font-size: 13px;
+  user-select: none;
+  -webkit-app-region: drag;
+  position: relative;
+  z-index: 1000;
+}
+
+.title-bar-left {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+}
+
+.window-controls {
+  display: flex;
+  gap: 8px;
+  -webkit-app-region: no-drag;
+}
+
+.window-control {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: var(--vscode-titleBar-inactiveForeground, #999999);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.window-control:hover {
+  background: var(--vscode-titleBar-hoverBackground, rgba(255, 255, 255, 0.1));
+  color: var(--vscode-titleBar-activeForeground, #ffffff);
+}
+
+.window-control.close:hover {
+  background: #e81123;
+  color: #ffffff;
+}
+
+.window-control.minimize:hover {
+  background: var(--vscode-titleBar-hoverBackground, rgba(255, 255, 255, 0.1));
+}
+
+.window-control.maximize:hover {
+  background: var(--vscode-titleBar-hoverBackground, rgba(255, 255, 255, 0.1));
+}
+
+.title-bar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 400;
+  color: var(--vscode-titleBar-activeForeground, #cccccc);
+}
+
+.app-title {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.title-bar-right {
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+  -webkit-app-region: no-drag;
+}
+
+.panel-controls {
+  display: flex;
+  gap: 4px;
+}
+
+.panel-control {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: var(--vscode-titleBar-inactiveForeground, #999999);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.panel-control:hover {
+  background: var(--vscode-titleBar-hoverBackground, rgba(255, 255, 255, 0.1));
+  color: var(--vscode-titleBar-activeForeground, #ffffff);
+}
+
+.panel-control.active {
+  background: var(--vscode-button-background, #0e639c);
+  color: var(--vscode-button-foreground, #ffffff);
+}
+
+.panel-control.active:hover {
+  background: var(--vscode-button-hoverBackground, #1177bb);
+}
+
+.panel-control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+  color: var(--vscode-titleBar-activeForeground, #cccccc);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0.7;
+}
+
+.panel-control-btn:hover {
+  background: var(--vscode-titleBar-hoverBackground, rgba(255, 255, 255, 0.1));
+  opacity: 1;
+}
+
+.panel-control-btn.active {
+  background: var(--vscode-titleBar-hoverBackground, rgba(255, 255, 255, 0.15));
+  opacity: 1;
+  color: var(--vscode-tab-activeForeground, #ffffff);
+}
+
+.panel-control-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .title-bar {
+  background: #2d2d30;
+  border-bottom-color: #1e1e1e;
+}
+
+/* Light theme adjustments */
+[data-theme="light"] .title-bar {
+  background: #f3f3f3;
+  border-bottom-color: #e5e5e5;
+  color: #333333;
+}
+
+[data-theme="light"] .app-title {
+  color: #333333;
+}
+
+[data-theme="light"] .panel-control-btn {
+  color: #333333;
+}
+
+[data-theme="light"] .panel-control-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .panel-control-btn.active {
+  background: rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,194 @@
+.tab-content-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--vscode-editor-background, #1e1e1e);
+  overflow: hidden;
+}
+
+.tab-content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* No active tab state */
+.no-active-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--vscode-editor-background, #1e1e1e);
+}
+
+.no-active-tab-content {
+  text-align: center;
+  color: var(--vscode-descriptionForeground, #999999);
+  max-width: 400px;
+  padding: 40px;
+}
+
+.no-active-tab-icon {
+  margin-bottom: 24px;
+  color: var(--vscode-descriptionForeground, #999999);
+  opacity: 0.5;
+}
+
+.no-active-tab-content h3 {
+  margin: 0 0 12px 0;
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--vscode-foreground, #cccccc);
+}
+
+.no-active-tab-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--vscode-descriptionForeground, #999999);
+}
+
+/* Unknown tab type state */
+.unknown-tab-type {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--vscode-editor-background, #1e1e1e);
+}
+
+.unknown-tab-content {
+  text-align: center;
+  color: var(--vscode-descriptionForeground, #999999);
+  max-width: 400px;
+  padding: 40px;
+}
+
+.unknown-tab-icon {
+  margin-bottom: 24px;
+  color: var(--vscode-errorForeground, #f48771);
+}
+
+.unknown-tab-content h3 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--vscode-errorForeground, #f48771);
+}
+
+.unknown-tab-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--vscode-descriptionForeground, #999999);
+}
+
+/* Content area styling */
+.tab-content-wrapper > * {
+  flex: 1;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Scrollbar styling for content */
+.tab-content-wrapper ::-webkit-scrollbar {
+  width: 14px;
+}
+
+.tab-content-wrapper ::-webkit-scrollbar-track {
+  background: var(--vscode-scrollbarSlider-background, rgba(121, 121, 121, 0.4));
+}
+
+.tab-content-wrapper ::-webkit-scrollbar-thumb {
+  background: var(--vscode-scrollbarSlider-background, rgba(121, 121, 121, 0.4));
+  border-radius: 0;
+}
+
+.tab-content-wrapper ::-webkit-scrollbar-thumb:hover {
+  background: var(--vscode-scrollbarSlider-hoverBackground, rgba(100, 100, 100, 0.7));
+}
+
+.tab-content-wrapper ::-webkit-scrollbar-thumb:active {
+  background: var(--vscode-scrollbarSlider-activeBackground, rgba(191, 191, 191, 0.4));
+}
+
+/* Light theme adjustments */
+[data-theme="light"] .tab-content-container {
+  background-color: var(--vscode-editor-background, #ffffff);
+}
+
+[data-theme="light"] .no-active-tab {
+  background-color: var(--vscode-editor-background, #ffffff);
+}
+
+[data-theme="light"] .no-active-tab-content {
+  color: var(--vscode-descriptionForeground, #666666);
+}
+
+[data-theme="light"] .no-active-tab-content h3 {
+  color: var(--vscode-foreground, #333333);
+}
+
+[data-theme="light"] .no-active-tab-content p {
+  color: var(--vscode-descriptionForeground, #666666);
+}
+
+[data-theme="light"] .unknown-tab-type {
+  background-color: var(--vscode-editor-background, #ffffff);
+}
+
+[data-theme="light"] .unknown-tab-content {
+  color: var(--vscode-descriptionForeground, #666666);
+}
+
+[data-theme="light"] .unknown-tab-content h3 {
+  color: var(--vscode-errorForeground, #e51400);
+}
+
+[data-theme="light"] .unknown-tab-content p {
+  color: var(--vscode-descriptionForeground, #666666);
+}
+
+/* Animation for content transitions */
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab-content-wrapper > * {
+  animation: contentFadeIn 0.2s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .no-active-tab-content,
+  .unknown-tab-content {
+    padding: 24px;
+    max-width: 300px;
+  }
+  
+  .no-active-tab-content h3,
+  .unknown-tab-content h3 {
+    font-size: 20px;
+  }
+  
+  .no-active-tab-icon,
+  .unknown-tab-icon {
+    margin-bottom: 16px;
+  }
+  
+  .no-active-tab-icon svg,
+  .unknown-tab-icon svg {
+    width: 48px;
+    height: 48px;
+  }
+}

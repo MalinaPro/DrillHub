@@ -46,14 +46,206 @@
   color: var(--vscode-sideBar-foreground, #cccccc);
   border-radius: 3px;
   margin-bottom: 1px;
+  transition: background-color 0.2s ease;
+  font-size: 13px;
 }
 
 .tree-item:hover {
-  background-color: var(--vscode-list-hoverBackground, #2a2d2e);
+  background-color: var(--vscode-list-hoverBackground, rgba(255, 255, 255, 0.1));
 }
 
 .tree-item.indent {
   padding-left: 24px;
+}
+
+/* Collapsible Section Styles */
+.collapsible-section {
+  margin-bottom: 8px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--vscode-sideBarSectionHeader-foreground, #cccccc);
+  background-color: var(--vscode-sideBarSectionHeader-background, transparent);
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.section-header:hover {
+  background-color: var(--vscode-list-hoverBackground, rgba(255, 255, 255, 0.1));
+}
+
+.chevron {
+  display: flex;
+  align-items: center;
+  margin-right: 6px;
+  transition: transform 0.2s ease;
+  width: 16px;
+  height: 16px;
+}
+
+.chevron.expanded {
+  transform: rotate(90deg);
+}
+
+.chevron svg {
+  width: 12px;
+  height: 12px;
+}
+
+.section-title {
+  flex: 1;
+}
+
+.section-content {
+  padding-left: 8px;
+}
+
+/* Profile Styles */
+.profile-info {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background-color: var(--vscode-sideBar-background, #252526);
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.profile-avatar {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.profile-details {
+  flex: 1;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--vscode-sideBar-foreground, #cccccc);
+  margin-bottom: 2px;
+}
+
+.profile-email {
+  font-size: 12px;
+  color: var(--vscode-descriptionForeground, #999999);
+}
+
+/* Sync Options */
+.sync-options {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sync-item {
+  padding: 6px 8px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.sync-item:hover {
+  background-color: var(--vscode-list-hoverBackground, rgba(255, 255, 255, 0.1));
+}
+
+/* Settings Group */
+.settings-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.setting-item {
+  padding: 6px 8px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.setting-item:hover {
+  background-color: var(--vscode-list-hoverBackground, rgba(255, 255, 255, 0.1));
+}
+
+.setting-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  color: var(--vscode-foreground, #cccccc);
+  font-size: 13px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  text-align: left;
+}
+
+.setting-button:hover {
+  background: var(--vscode-list-hoverBackground, #2a2d2e);
+}
+
+.setting-button svg {
+  flex-shrink: 0;
+}
+
+.setting-button .arrow {
+  margin-left: auto;
+  opacity: 0.6;
+}
+
+.setting-button:hover .arrow {
+  opacity: 1;
+}
+
+/* Category List */
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.category-item {
+  padding: 6px 8px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.category-item:hover {
+  background-color: var(--vscode-list-hoverBackground, rgba(255, 255, 255, 0.1));
+}
+
+/* Outline Content */
+.outline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.outline-item {
+  padding: 6px 8px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.outline-item:hover {
+  background-color: var(--vscode-list-hoverBackground, rgba(255, 255, 255, 0.1));
 }
 
 /* Marketplace */

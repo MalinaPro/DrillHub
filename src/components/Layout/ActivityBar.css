@@ -5,39 +5,77 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8px 0;
+  justify-content: space-between;
+  padding: 0;
   height: 100vh;
   box-sizing: border-box;
 }
 
+.activity-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8px;
+}
+
 .activity-bar-item {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   background: none;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 4px;
-  border-radius: 4px;
+  margin: 0;
   transition: background-color 0.2s ease;
   color: var(--vscode-activityBar-foreground, #cccccc);
+  position: relative;
+  border-left: 2px solid transparent;
+}
+
+.activity-bar-item svg {
+  width: 20px;
+  height: 20px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
 }
 
 .activity-bar-item:hover {
-  background-color: var(--vscode-activityBar-activeBorder, #007acc);
+  background-color: var(--vscode-activityBar-hoverBackground, rgba(255, 255, 255, 0.1));
+}
+
+.activity-bar-item:hover svg {
+  opacity: 1;
 }
 
 .activity-bar-item.active {
-  background-color: var(--vscode-activityBar-activeBorder, #007acc);
+  background-color: var(--vscode-activityBar-activeBackground, rgba(255, 255, 255, 0.16));
   border-left: 2px solid var(--vscode-activityBar-activeBorder, #007acc);
+  color: var(--vscode-activityBar-activeForeground, #ffffff);
 }
 
-.activity-bar-icon {
-  font-size: 16px;
-  line-height: 1;
+.activity-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 8px;
 }
+
+.chat-toggle {
+  margin-bottom: 0 !important;
+}
+
+.chat-toggle.active {
+  background-color: var(--vscode-button-background);
+  color: var(--vscode-button-foreground);
+}
+
+.chat-toggle.active svg {
+  opacity: 1;
+}
+
+
 
 /* Dark theme variables */
 :root {
@@ -45,6 +83,9 @@
   --vscode-activityBar-foreground: #cccccc;
   --vscode-activityBar-border: #3e3e3e;
   --vscode-activityBar-activeBorder: #007acc;
+  --vscode-activityBar-activeBackground: rgba(255, 255, 255, 0.16);
+  --vscode-activityBar-activeForeground: #ffffff;
+  --vscode-activityBar-hoverBackground: rgba(255, 255, 255, 0.1);
 }
 
 /* Light theme */
@@ -53,4 +94,7 @@
   --vscode-activityBar-foreground: #333333;
   --vscode-activityBar-border: #e5e5e5;
   --vscode-activityBar-activeBorder: #0078d4;
+  --vscode-activityBar-activeBackground: rgba(0, 0, 0, 0.1);
+  --vscode-activityBar-activeForeground: #000000;
+  --vscode-activityBar-hoverBackground: rgba(0, 0, 0, 0.05);
 }

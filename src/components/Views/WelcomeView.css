@@ -1,0 +1,271 @@
+.welcome-view {
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: var(--vscode-foreground, #cccccc);
+  background-color: var(--vscode-editor-background, #1e1e1e);
+  height: 100%;
+  overflow-y: auto;
+}
+
+.welcome-header {
+  text-align: center;
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--vscode-panel-border, #3e3e42);
+}
+
+.welcome-logo {
+  margin-bottom: 24px;
+  color: var(--vscode-button-background, #0e639c);
+}
+
+.welcome-header h1 {
+  margin: 0 0 12px 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--vscode-foreground, #cccccc);
+}
+
+.welcome-header p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--vscode-descriptionForeground, #999999);
+}
+
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.welcome-section {
+  background-color: var(--vscode-sideBar-background, #252526);
+  border: 1px solid var(--vscode-panel-border, #3e3e42);
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.welcome-section h2 {
+  margin: 0 0 12px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--vscode-foreground, #cccccc);
+}
+
+.welcome-section > p {
+  margin: 0 0 24px 0;
+  font-size: 14px;
+  color: var(--vscode-descriptionForeground, #999999);
+}
+
+/* Action Cards */
+.action-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.action-card {
+  background-color: var(--vscode-editor-background, #1e1e1e);
+  border: 1px solid var(--vscode-panel-border, #3e3e42);
+  border-radius: 6px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-card:hover {
+  border-color: var(--vscode-button-background, #0e639c);
+  background-color: var(--vscode-list-hoverBackground, rgba(255, 255, 255, 0.04));
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: var(--vscode-button-background, #0e639c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--vscode-button-foreground, #ffffff);
+}
+
+.action-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--vscode-foreground, #cccccc);
+}
+
+.action-card p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--vscode-descriptionForeground, #999999);
+  line-height: 1.4;
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.quick-action-btn {
+  background-color: var(--vscode-button-background, #0e639c);
+  color: var(--vscode-button-foreground, #ffffff);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.quick-action-btn:hover {
+  background-color: var(--vscode-button-hoverBackground, #1177bb);
+}
+
+.quick-action-btn svg {
+  flex-shrink: 0;
+}
+
+/* Resource Links */
+.resource-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resource-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: var(--vscode-editor-background, #1e1e1e);
+  border: 1px solid var(--vscode-panel-border, #3e3e42);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--vscode-foreground, #cccccc);
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.resource-link:hover {
+  border-color: var(--vscode-button-background, #0e639c);
+  background-color: var(--vscode-list-hoverBackground, rgba(255, 255, 255, 0.04));
+  color: var(--vscode-button-background, #0e639c);
+}
+
+.resource-link span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resource-link svg {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.resource-link:hover svg {
+  opacity: 1;
+}
+
+/* Welcome Footer */
+.welcome-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--vscode-panel-border, #3e3e42);
+}
+
+.welcome-footer p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--vscode-descriptionForeground, #999999);
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-view {
+    padding: 24px;
+  }
+  
+  .welcome-header h1 {
+    font-size: 28px;
+  }
+  
+  .welcome-section {
+    padding: 24px;
+  }
+  
+  .action-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .quick-actions {
+    flex-direction: column;
+  }
+  
+  .quick-action-btn {
+    justify-content: center;
+  }
+}
+
+/* Light theme */
+[data-theme="light"] .welcome-view {
+  color: var(--vscode-foreground, #333333);
+  background-color: var(--vscode-editor-background, #ffffff);
+}
+
+[data-theme="light"] .welcome-header h1 {
+  color: var(--vscode-foreground, #333333);
+}
+
+[data-theme="light"] .welcome-header p {
+  color: var(--vscode-descriptionForeground, #666666);
+}
+
+[data-theme="light"] .welcome-section {
+  background-color: var(--vscode-sideBar-background, #f3f3f3);
+  border-color: var(--vscode-panel-border, #e5e5e5);
+}
+
+[data-theme="light"] .welcome-section h2 {
+  color: var(--vscode-foreground, #333333);
+}
+
+[data-theme="light"] .welcome-section > p {
+  color: var(--vscode-descriptionForeground, #666666);
+}
+
+[data-theme="light"] .action-card {
+  background-color: var(--vscode-editor-background, #ffffff);
+  border-color: var(--vscode-panel-border, #e5e5e5);
+}
+
+[data-theme="light"] .action-card h3 {
+  color: var(--vscode-foreground, #333333);
+}
+
+[data-theme="light"] .action-card p {
+  color: var(--vscode-descriptionForeground, #666666);
+}
+
+[data-theme="light"] .resource-link {
+  background-color: var(--vscode-editor-background, #ffffff);
+  border-color: var(--vscode-panel-border, #e5e5e5);
+  color: var(--vscode-foreground, #333333);
+}
+
+[data-theme="light"] .welcome-footer p {
+  color: var(--vscode-descriptionForeground, #666666);
+}

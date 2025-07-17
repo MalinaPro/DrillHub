@@ -1,0 +1,245 @@
+/* Tab System Styles */
+.tab-system {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--vscode-editor-background, #1e1e1e);
+}
+
+.tab-bar {
+  display: flex;
+  align-items: center;
+  background-color: var(--vscode-editorGroupHeader-tabsBackground, #2d2d30);
+  border-bottom: 1px solid var(--vscode-editorGroupHeader-tabsBorder, #3e3e42);
+  height: 35px;
+  min-height: 35px;
+  overflow: hidden;
+}
+
+.tab-list {
+  display: flex;
+  flex: 1;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tab-list::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  min-width: 120px;
+  max-width: 200px;
+  height: 35px;
+  background-color: var(--vscode-tab-inactiveBackground, transparent);
+  border-right: 1px solid var(--vscode-tab-border, #3e3e42);
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  user-select: none;
+}
+
+.tab:hover {
+  background-color: var(--vscode-tab-hoverBackground, rgba(255, 255, 255, 0.05));
+}
+
+.tab.active {
+  background-color: var(--vscode-tab-activeBackground, #1e1e1e);
+  border-bottom: 1px solid var(--vscode-tab-activeBorder, #007acc);
+  color: var(--vscode-tab-activeForeground, #ffffff);
+}
+
+.tab.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--vscode-tab-activeBorder, #007acc);
+}
+
+.tab.dragging {
+  opacity: 0.7;
+  z-index: 1000;
+}
+
+.tab-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 8px;
+  overflow: hidden;
+}
+
+.tab-icon {
+  margin-right: 6px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.tab-title {
+  flex: 1;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--vscode-tab-inactiveForeground, #969696);
+  display: flex;
+  align-items: center;
+}
+
+.tab.active .tab-title {
+  color: var(--vscode-tab-activeForeground, #ffffff);
+}
+
+.dirty-indicator {
+  margin-left: 4px;
+  color: var(--vscode-tab-unfocusedActiveForeground, #ffffff);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.tab-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  margin-left: 4px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+  color: var(--vscode-tab-inactiveForeground, #969696);
+  flex-shrink: 0;
+}
+
+.tab:hover .tab-close,
+.tab.active .tab-close {
+  opacity: 1;
+}
+
+.tab-close:hover {
+  background-color: var(--vscode-toolbar-hoverBackground, rgba(255, 255, 255, 0.1));
+  color: var(--vscode-tab-activeForeground, #ffffff);
+}
+
+.tab-close svg {
+  width: 12px;
+  height: 12px;
+}
+
+.new-tab-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--vscode-tab-inactiveForeground, #969696);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-radius: 3px;
+  margin: 0 4px;
+}
+
+.new-tab-button:hover {
+  background-color: var(--vscode-toolbar-hoverBackground, rgba(255, 255, 255, 0.1));
+  color: var(--vscode-tab-activeForeground, #ffffff);
+}
+
+.tab-actions {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.tab-action {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--vscode-tab-inactiveForeground, #969696);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-radius: 3px;
+  margin-left: 2px;
+}
+
+.tab-action:hover {
+  background-color: var(--vscode-toolbar-hoverBackground, rgba(255, 255, 255, 0.1));
+  color: var(--vscode-tab-activeForeground, #ffffff);
+}
+
+.tab-action svg {
+  width: 14px;
+  height: 14px;
+}
+
+.tab-content-area {
+  flex: 1;
+  overflow: auto;
+  background-color: var(--vscode-editor-background, #1e1e1e);
+}
+
+.empty-tab-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--vscode-descriptionForeground, #999999);
+}
+
+.empty-message {
+  text-align: center;
+}
+
+.empty-message h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--vscode-foreground, #cccccc);
+}
+
+.empty-message p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Dark theme variables */
+:root {
+  --vscode-editorGroupHeader-tabsBackground: #2d2d30;
+  --vscode-editorGroupHeader-tabsBorder: #3e3e42;
+  --vscode-tab-inactiveBackground: transparent;
+  --vscode-tab-activeBackground: #1e1e1e;
+  --vscode-tab-activeBorder: #007acc;
+  --vscode-tab-border: #3e3e42;
+  --vscode-tab-inactiveForeground: #969696;
+  --vscode-tab-activeForeground: #ffffff;
+  --vscode-tab-unfocusedActiveForeground: #ffffff;
+  --vscode-tab-hoverBackground: rgba(255, 255, 255, 0.05);
+  --vscode-toolbar-hoverBackground: rgba(255, 255, 255, 0.1);
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --vscode-editorGroupHeader-tabsBackground: #f3f3f3;
+  --vscode-editorGroupHeader-tabsBorder: #e5e5e5;
+  --vscode-tab-inactiveBackground: transparent;
+  --vscode-tab-activeBackground: #ffffff;
+  --vscode-tab-activeBorder: #0078d4;
+  --vscode-tab-border: #e5e5e5;
+  --vscode-tab-inactiveForeground: #666666;
+  --vscode-tab-activeForeground: #000000;
+  --vscode-tab-unfocusedActiveForeground: #000000;
+  --vscode-tab-hoverBackground: rgba(0, 0, 0, 0.05);
+  --vscode-toolbar-hoverBackground: rgba(0, 0, 0, 0.1);
+}
