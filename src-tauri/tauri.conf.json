@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.tauri.app/config/1",
+  "build": {
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev",
+    "devPath": "http://localhost:4444",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "DrillHub",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "bundle": {
+      "identifier": "com.drillhub.dashboard"
+    },
+    "windows": [
+      {
+        "title": "DrillHub Dashboard",
+        "width": 1280,
+        "height": 800,
+        "resizable": true
+      }
+    ]
+  }
+}
