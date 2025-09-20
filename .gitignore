@@ -1,0 +1,12 @@
+/node_modules
+/dist
+/.turbo
+/.parcel-cache
+/.pnp.cjs
+/pnpm-lock.yaml
+/package-lock.json
+/yarn.lock
+/src-tauri/target
+/src-tauri/Cargo.lock
+.DS_Store
+npm-debug.log*
